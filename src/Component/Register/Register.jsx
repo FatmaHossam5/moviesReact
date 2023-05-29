@@ -44,7 +44,7 @@ export default function Register() {
         if(joiResponse.error){
             setErrList(joiResponse.error.details);
         }else{
-         let {data}= await axios.post('https://routeegypt.herokuapp.com/signup',user)
+         let {data}= await axios.post('https://route-movies-api.vercel.app/signup',user)
          if(data.errors){
             setFailedMsg(data.message)
 
