@@ -62,7 +62,7 @@ export default function Register() {
 
     <label htmlFor="first_name">first_name</label>
     <input onChange={getUser} type="text" className='form-control my-3' id="first_name"placeholder='first_name' />
-{ getCurrentError("first_name").length==0?'':<div className='alert alert-danger'>{ getCurrentError("first_name")}</div>}
+    { getCurrentError("first_name").length==0?'':<div className='alert alert-danger'>{ getCurrentError("first_name")}</div>}
     <label htmlFor="last_name">last_name</label>
     <input onChange={getUser} type="text" className='form-control my-3' id="last_name"placeholder='last_name' />
     { getCurrentError("last_name").length==0?'':<div className='alert alert-danger'>{ getCurrentError("last_name")}</div>}
