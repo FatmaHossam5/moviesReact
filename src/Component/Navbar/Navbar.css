@@ -1,0 +1,305 @@
+/* Enhanced Navbar Styles for Better UX */
+
+/* Custom Navbar Container */
+.custom-navbar {
+  padding: 1rem 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(19, 23, 34, 0.9) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Brand Logo Styling */
+.brand-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+
+.brand-text {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brand-logo:hover .brand-text {
+  transform: scale(1.05);
+}
+
+/* Custom Toggle Button */
+.custom-toggler {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.custom-toggler:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.custom-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+/* Main Navigation Links */
+.main-nav {
+  gap: 0.5rem;
+}
+
+.nav-link-custom {
+  padding: 0.75rem 1.25rem !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.nav-link-custom:hover::before {
+  left: 100%;
+}
+
+.nav-link-custom:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  color: #4ecdc4 !important;
+}
+
+.nav-link-custom.active {
+  background-color: rgba(78, 205, 196, 0.2);
+  color: #4ecdc4 !important;
+}
+
+/* Right Navigation Container */
+.right-nav {
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.social-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px) scale(1.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.social-link i {
+  font-size: 1.1rem;
+}
+
+/* Authentication Buttons */
+.auth-btn {
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  border-width: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.auth-btn:hover::before {
+  left: 100%;
+}
+
+.auth-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Logout Button */
+.logout-btn {
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-width: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logout-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.logout-btn:hover::before {
+  left: 100%;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(220, 53, 69, 0.4);
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+  .custom-navbar {
+    padding: 0.75rem 0;
+  }
+  
+  .brand-logo {
+    font-size: 1.5rem;
+  }
+  
+  .social-icons {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .right-nav {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    align-items: stretch;
+  }
+  
+  .auth-btn,
+  .logout-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .main-nav {
+    margin-bottom: 1rem;
+  }
+  
+  .nav-link-custom {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .social-icons {
+    gap: 0.75rem;
+  }
+  
+  .social-link {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .social-link i {
+    font-size: 1rem;
+  }
+  
+  .brand-logo {
+    font-size: 1.3rem;
+  }
+  
+  .auth-btn,
+  .logout-btn {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for navbar collapse */
+.navbar-collapse {
+  transition: all 0.3s ease;
+}
+
+/* Focus states for accessibility */
+.nav-link-custom:focus,
+.auth-btn:focus,
+.logout-btn:focus,
+.social-link:focus {
+  outline: 2px solid #4ecdc4;
+  outline-offset: 2px;
+}
+
+/* Loading state for buttons */
+.auth-btn:active,
+.logout-btn:active {
+  transform: translateY(0);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .custom-navbar {
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    border-bottom: 2px solid white;
+  }
+  
+  .nav-link-custom:hover,
+  .auth-btn:hover,
+  .logout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .nav-link-custom,
+  .auth-btn,
+  .logout-btn,
+  .social-link,
+  .brand-logo {
+    transition: none;
+  }
+  
+  .nav-link-custom::before,
+  .auth-btn::before,
+  .logout-btn::before {
+    display: none;
+  }
+}
